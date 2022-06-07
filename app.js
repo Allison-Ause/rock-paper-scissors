@@ -12,6 +12,7 @@ let total = 0;
 //these are global variables:
 let computerThrow = '';
 let userThrow = '';
+const throwResult = document.getElementById('throw-result');
 
 function scoreGame() {
     computerThrow = getRandomItem(throws);
@@ -20,12 +21,16 @@ function scoreGame() {
 
     if (result === 1) {
         wins++;
+        throwResult.textContent = 'win';
+
     }
     else if (result === -1) {
         losses++;
+        throwResult.textContent = 'lose';
     }
     else if (result === 0) {
         draws++;
+        throwResult.textContent = 'tie';
     }
     total++;
 
@@ -70,7 +75,6 @@ function displayFaceOff() {
     else {
         faceOffDisplay.classList.add('hidden');
     }
-        
     userImage.src = 'assets/' + userThrow + '.png';
     computerImage.src = 'assets/' + computerThrow + '.png';
 }

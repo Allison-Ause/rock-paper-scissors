@@ -15,6 +15,12 @@ img {
     object-fit: cover;
 }
 
+#faceoff-display {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
 #results-display {
     display: flex;
     flex-wrap: wrap;
