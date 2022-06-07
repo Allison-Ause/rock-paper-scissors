@@ -13,9 +13,19 @@ let total = 0;
 let computerThrow = '';
 let userThrow = '';
 const throwResult = document.getElementById('throw-result');
+const computerLabel = document.getElementById('computer-label');
 
 function scoreGame() {
     computerThrow = getRandomItem(throws);
+
+    if (computerThrow === 'rock') {
+        computerLabel.textContent = 'Rock';
+    } else if (computerThrow === 'paper') {
+        computerLabel.textContent = 'Paper';
+    } else if (computerThrow === 'scissors') {
+        computerLabel.textContent = 'Scissors';
+    }
+
 
     const result = score(userThrow, computerThrow);
 
@@ -43,20 +53,24 @@ function scoreGame() {
 const rockButton = document.getElementById('rock-select');
 const paperButton = document.getElementById('paper-select');
 const scissorsButton = document.getElementById('scissors-select');
+const userLabel = document.getElementById('user-label');
 
 rockButton.addEventListener('click', () => {
     userThrow = 'rock';
     scoreGame();
+    userLabel.textContent = 'Rock';
 });
 
 paperButton.addEventListener('click', () => {
     userThrow = 'paper';
     scoreGame();
+    userLabel.textContent = 'Paper';
 });
 
 scissorsButton.addEventListener('click', () => {
     userThrow = 'scissors';
     scoreGame();
+    userLabel.textContent = 'Scissors';
 });
 
 const winsDisplay = document.getElementById('wins-display');
@@ -69,7 +83,9 @@ const userImage = document.getElementById('user-image');
 const computerImage = document.getElementById('computer-image');
 
 function displayFaceOff() {
+
     if (choosing) {
+        console.log('is this running?');
         faceOffDisplay.classList.remove('hidden');
     }
     else {
@@ -88,15 +104,5 @@ function displayResults() {
 
 }
 
-
-    // display functions
-    // optional: subscribe to events
-        // event handlers - what needs to happen?
-        // logic and calculations
-        // state update
-        // re-display components (which ones?)
-    // optional: handle functions for shared event handler logic
-
-// page load actions
 displayResults();
 

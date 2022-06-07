@@ -9,46 +9,43 @@
     <link rel="stylesheet" href="styles/reset.css" />
     <link rel="stylesheet" href="styles/main.css" />
     <link rel="stylesheet" href="styles/home.css" />
-    <title>Web UI Project</title>
+    <title>Prehistoric Rock Paper Scissors</title>
 </head>
 
 <body>
-    <header>
-        <img src="assets/html_css_js.png">
-        <h1>Rock Paper Scissors Project</h1>
-    </header>
+
 
     <main>
-        <h1>Rock Paper Scissors Game!</h1>
+        <h1 id="header">Rock, Paper, Scissors: Dragon Battle</h1>
 
     <section id="choice-display">   
-        <h2>What will you choose?</h2>
+        <h2>Choose your weapon:</h2>
 
 
         <button class="rock-paper-scissors" id="rock-select">
             <img src="./assets/rock.png">
-            Rock</button>
+            </button>
         <button class="rock-paper-scissors" id="paper-select">
             <img src="./assets/paper.png">
-            Paper</button>
+            </button>
         <button class="rock-paper-scissors" id="scissors-select">
             <img src="./assets/scissors.png">
-            Scissors</button>
+            </button>
 
     </section> 
 
     <section class='hidden' id="faceoff-display">
         <h2>Battle Results!</h2>
         <div id="user-pick">
-            <h3>You chose:</h3>
+            <h3>You chose: <span id="user-label"></span></h3>
             <img id="user-image" src="./assets/rock.png">
         </div>
 
         <div id="computer-pick">
-            <h3>Your Rival chose:</h3>
+            <h3>Your rival chose: <span id="computer-label"></span></h3>
             <img id="computer-image" src="/assets/paper.png">
         </div>
-        <h3>You <span id="throw-result"></span>!</h3>
+        <h3>That means you <span id="throw-result"></span> this battle!</h3>
 
     </section>
 
