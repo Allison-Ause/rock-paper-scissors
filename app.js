@@ -5,6 +5,7 @@ import { getRandomItem, score } from './utils.js';
 const throws = ['rock', 'paper', 'scissors'];
 let wins = 0;
 let losses = 0;
+let draws = 0;
 let total = 0;
 
 //these are global variables:
@@ -22,8 +23,12 @@ function scoreGame() {
     else if (result === -1) {
         losses++;
     }
+    else if (result === 0) {
+        draws++;
+    }
     total++;
-    console.log(wins, losses, total);
+
+    displayResults();
 }
 // components
     // component
@@ -47,6 +52,17 @@ scissorsButton.addEventListener('click', () => {
     scoreGame();
 });
 
+const winsDisplay = document.getElementById('wins-display');
+const lossesDisplay = document.getElementById('losses-display');
+const drawsDisplay = document.getElementById('draws-display');
+const totalDisplay = document.getElementById('total-display');
+
+function displayResults() {
+    winsDisplay.textContent = wins;
+    lossesDisplay.textContent = losses;
+    drawsDisplay.textContent = draws;
+    totalDisplay.textContent = total;
+}
     // display functions
     // optional: subscribe to events
         // event handlers - what needs to happen?
@@ -56,5 +72,5 @@ scissorsButton.addEventListener('click', () => {
     // optional: handle functions for shared event handler logic
 
 // page load actions
-
+displayResults();
 
