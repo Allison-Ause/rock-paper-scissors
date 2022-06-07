@@ -1,11 +1,6 @@
 /* add css for index.html */
 
 
-#results-display {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-}
 
 #choice-display {
     display: flex;
@@ -20,6 +15,13 @@ img {
     object-fit: cover;
 }
 
-#scoreboard-display {
+#results-display {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
     padding-bottom: 50px;
+}
+
+.hidden {
+    display: none;
 }

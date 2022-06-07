@@ -26,10 +26,10 @@
 
 
         <button class="rock-paper-scissors" id="rock-select">
-            <img src="./assets/rock2.png">
+            <img src="./assets/rock.png">
             Rock</button>
         <button class="rock-paper-scissors" id="paper-select">
-            <img src="./assets/paper2.jpeg">
+            <img src="./assets/paper.png">
             Paper</button>
         <button class="rock-paper-scissors" id="scissors-select">
             <img src="./assets/scissors.png">
@@ -37,18 +37,28 @@
 
     </section> 
 
-    <section id="results-display">
+    <section class='hidden' id="faceoff-display">
+        <h2>Battle Results!</h2>
+        <div id="user-pick">
+            <h3>You chose:</h3>
+            <img id="user-image" src="./assets/rock.png">
+        </div>
 
+        <div id="computer-pick">
+            <h3>The Dragon chose:</h3>
+            <img id="computer-image" src="/assets/paper.png">
+        </div>
+        <h3>You<span id="throw-result">!</span></h3>
 
     </section>
-        
 
-    <section id="scoreboard-display">
-        <h2>Scoreboard Display</h2>
+
+    <section id="results-display">
+        </h2>Scoreboard Display</h2>
             <p>
             Congratulations! You beat the dragon <span id="wins-display">0</span> times,
             but unfortunately she bested you <span id="losses-display">0</span> times and 
-            you tied <span id="draws-display">0</span> But out of <span id="total-display">0</span> 
+            you tied <span id="draws-display">0</span>. But out of <span id="total-display">0</span> 
             battles, that's not half bad!
             </p>
     </section>

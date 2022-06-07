@@ -3,6 +3,7 @@ import { getRandomItem, score } from './utils.js';
 
 // state
 const throws = ['rock', 'paper', 'scissors'];
+let choosing = true;
 let wins = 0;
 let losses = 0;
 let draws = 0;
@@ -29,6 +30,7 @@ function scoreGame() {
     total++;
 
     displayResults();
+    displayFaceOff();
 }
 // components
     // component
@@ -56,13 +58,33 @@ const winsDisplay = document.getElementById('wins-display');
 const lossesDisplay = document.getElementById('losses-display');
 const drawsDisplay = document.getElementById('draws-display');
 const totalDisplay = document.getElementById('total-display');
+const faceOffDisplay = document.getElementById('faceoff-display');
+
+const userImage = document.getElementById('user-image');
+const computerImage = document.getElementById('computer-image');
+
+function displayFaceOff() {
+    if (choosing) {
+        faceOffDisplay.classList.remove('hidden');
+    }
+    else {
+        faceOffDisplay.classList.add('hidden');
+    }
+        
+    userImage.src = 'assets/' + userThrow + '.png';
+    computerImage.src = 'assets/' + computerThrow + '.png';
+}
+
 
 function displayResults() {
     winsDisplay.textContent = wins;
     lossesDisplay.textContent = losses;
     drawsDisplay.textContent = draws;
     totalDisplay.textContent = total;
+
 }
+
+
     // display functions
     // optional: subscribe to events
         // event handlers - what needs to happen?
