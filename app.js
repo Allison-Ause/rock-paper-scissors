@@ -26,7 +26,6 @@ function scoreGame() {
         computerLabel.textContent = 'Scissors';
     }
 
-
     const result = score(userThrow, computerThrow);
 
     if (result === 1) {
