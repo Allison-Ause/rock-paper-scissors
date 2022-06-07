@@ -1,1 +1,25 @@
 /* add css for index.html */
+
+
+#results-display {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+#choice-display {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+img {
+    float: left;
+    width:  150px;
+    height: 150px;
+    object-fit: cover;
+}
+
+#scoreboard-display {
+    padding-bottom: 50px;
+}
