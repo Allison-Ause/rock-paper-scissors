@@ -85,7 +85,6 @@ const computerImage = document.getElementById('computer-image');
 function displayFaceOff() {
 
     if (choosing) {
-        console.log('is this running?');
         faceOffDisplay.classList.remove('hidden');
     }
     else {
