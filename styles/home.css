@@ -1,1 +1,42 @@
 /* add css for index.html */
+
+#header {
+    padding: 30px;
+    text-align: center;
+    border: 4px ridge black;
+    background: radial-gradient(592px at 48.2% 50%, rgba(255, 255, 249, 0.6) 0%, rgb(160, 199, 254) 74.6%);
+}
+
+#choice-display {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding-top: 20px;
+}
+
+img {
+    float: left;
+    width:  150px;
+    height: 150px;
+    object-fit: cover;
+}
+
+#faceoff-display {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 85px;
+    padding-top: 75px;
+    padding-bottom: 40px;
+}
+
+
+#results-display {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding-bottom: 50px;
+}
+
+.hidden {
+    visibility: hidden;
+}

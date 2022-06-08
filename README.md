@@ -8,6 +8,25 @@
 
 ## Making a plan
 
+![Wireframe](wireframe.png)
+    
+Logic Calculations:
+    Compare User to Computer;
+    wins = 1
+    losses = -1
+    draws = 0
+
+Re-displays:
+    Choice leads to Result which triggers:
+    Unhiding Results Box
+        Generating User & Computer Selection images and labels
+    Updating tally in Scoreboard
+
+
+On page load
+    Reset tallies to zero
+    Hide Results Box
+
 1. Make a drawing of your app. **Simple "wireframes"**
 1. Once you have a drawing, **name the HTML elements** you'll need to realize your vision**
 1. Determine the Components (sections) of your app.

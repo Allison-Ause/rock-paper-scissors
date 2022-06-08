@@ -9,16 +9,57 @@
     <link rel="stylesheet" href="styles/reset.css" />
     <link rel="stylesheet" href="styles/main.css" />
     <link rel="stylesheet" href="styles/home.css" />
-    <title>Web UI Project</title>
+    <title>Prehistoric Rock Paper Scissors</title>
 </head>
 
 <body>
-    <header>
-        <img src="assets/html_css_js.png">
-        <h1>Web UI Project</h1>
-    </header>
+
 
     <main>
+        <h1 id="header">Rock, Paper, Scissors: Dragon Battle</h1>
+
+    <section id="choice-display">   
+        <h2>Choose your weapon:</h2>
+
+
+        <button class="rock-paper-scissors" id="rock-select">
+            <img src="./assets/rock.png">
+            </button>
+        <button class="rock-paper-scissors" id="paper-select">
+            <img src="./assets/paper.png">
+            </button>
+        <button class="rock-paper-scissors" id="scissors-select">
+            <img src="./assets/scissors.png">
+            </button>
+
+    </section> 
+
+    <section class='hidden' id="faceoff-display">
+        <h2>Battle Results!</h2>
+        <div id="user-pick">
+            <h3>You chose: <span id="user-label"></span></h3>
+            <img id="user-image" src="./assets/rock.png">
+        </div>
+
+        <div id="computer-pick">
+            <h3>Your rival chose: <span id="computer-label"></span></h3>
+            <img id="computer-image" src="/assets/paper.png">
+        </div>
+        <h3>That means you <span id="throw-result"></span> this battle!</h3>
+
+    </section>
+
+
+    <section id="results-display">
+        <h2>Scoreboard Display</h2>
+            <p>
+            Congratulations! You beat your rival <span id="wins-display">0</span> times,
+            but they managed to best you <span id="losses-display">0</span> times. And don't forget about
+            those <span id="draws-display">0</span> pesky ties!
+            Out of <span id="total-display">0</span> total
+            battles, though — that's not half bad!
+            </p>
+    </section>
 
     </main>
 
